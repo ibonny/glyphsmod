@@ -1,0 +1,15 @@
+{
+  "type": "glyphmod:gem_infusing",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "fluid": {
+    "FluidName": "glyphmod:soap_water_fluid",
+    "Amount": 250
+  },
+  "output": {
+    "item": "minecraft:diamond"
+  }
+}
