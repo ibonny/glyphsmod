@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "glyphmod:block/jasmine"
+    }
+  }
+}

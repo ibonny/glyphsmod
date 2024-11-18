@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "glyphmod:block/jasmine"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "glyphmod:block/zircon_lamp_on" },
+    "lit=false": { "model": "glyphmod:block/zircon_lamp_off" }
+  }
+}

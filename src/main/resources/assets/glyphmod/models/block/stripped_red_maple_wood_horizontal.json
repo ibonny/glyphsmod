@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "glyphmod:block/stripped_red_maple_log",
+    "side": "glyphmod:block/stripped_red_maple_log"
+  }
+}

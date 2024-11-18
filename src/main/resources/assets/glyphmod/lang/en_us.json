@@ -1,0 +1,44 @@
+{
+  "item.glyphmod.zircon": "Zircon",
+  "item.glyphmod.raw_zircon": "Raw Zircon",
+  "item.glyphmod.eight_ball": "Eight Ball",
+  "item.glyphmod.blueberry": "Blueberry",
+  "item.glyphmod.blueberry_seeds": "Blueberry Seeds",
+  "item.glyphmod.soap_water_bucket": "Soap Water Bucket",
+  "item.glyphmod.kaupensword": "Kaupen Sword",
+  "item.glyphmod.chomper_spawn_egg": "Chomper Spawn Egg",
+  "item.glyphmod.zircon_pickaxe": "Zircon Pickaxe",
+
+  "block.glyphmod.zircon_block": "Block of Zircon",
+  "block.glyphmod.zircon_ore": "Zircon Ore",
+  "block.glyphmod.deepslate_zircon_ore": "Deepslate Zircon Ore",
+  "block.glyphmod.jumpy_block": "Jumpy Block",
+  "block.glyphmod.zircon_lamp": "Zircon Lamp",
+  "block.glyphmod.blueberry_crop": "Blueberry Crop",
+  "block.glyphmod.endstone_zircon_ore": "Endstone Zircon Ore",
+  "block.glyphmod.netherrack_zircon_ore": "Netherrack Zircon Ore",
+  "block.glyphmod.gem_infusing_station": "Gem Infusing Station",
+
+  "block.glyphmod.red_maple_log": "Red Maple Log",
+  "block.glyphmod.red_maple_planks": "Red Maple Planks",
+  "block.glyphmod.red_maple_wood": "Red Maple Wood",
+  "block.glyphmod.stripped_red_maple_log": "Stripped Red Maple Log",
+  "block.glyphmod.stripped_red_maple_wood": "Stripped Red Maple Wood",
+  "block.glyphmod.red_maple_leaves": "Red Maple Leaves",
+  "block.glyphmod.red_maple_sapling": "Red Maple Sapling",
+
+  "block.glyphmod.jasmine": "Jasmine",
+  "block.glyphmod.potted_jasmine": "Potted Jasmine",
+
+  "itemGroup.glyphtab": "Hieroglyphics",
+  "entity.minecraft.villager.glyphmod.jumpy_master": "Jumpy Master",
+
+  "key.category.glyphmod.tutorial": "Tutorial Mod",
+  "key.glyphmod.drink_water": "Drink Water",
+
+  "message.glyphmod.drink_water": "Drinking Water",
+  "message.glyphmod.no_water": "No water nearby!",
+
+  "glyphmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "glyphmod.tooltip.liquid.amount": "%s mB"
+}
