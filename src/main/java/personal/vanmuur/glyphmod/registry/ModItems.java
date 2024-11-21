@@ -6,11 +6,15 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import personal.vanmuur.glyphmod.GlyphMod;
+import personal.vanmuur.glyphmod.item.BlankRuneItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GlyphMod.MOD_ID);
 
-    public static final RegistryObject<Item> BLANK_RUNE = ITEMS.register("blank_rune", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.GLYPH_TAB)));
+    public static final RegistryObject<Item> BLANK_RUNE =
+        ITEMS.register("blank_rune", () -> new BlankRuneItem(new Item.Properties().tab(ModCreativeModeTab.GLYPH_TAB))
+    );
+
 //    public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.GLYPH_TAB)));
     // public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.GLYPH_TAB)));
     // public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball", () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.GLYPH_TAB).stacksTo(1)));

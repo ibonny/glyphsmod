@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "glyphmod:block/written_sandstone_front",
+    "side": "glyphmod:block/written_sandstone_side",
+    "top": "glyphmod:block/written_sandstone_top"
+  }
+}

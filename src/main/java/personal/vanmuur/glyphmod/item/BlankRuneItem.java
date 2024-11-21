@@ -2,15 +2,21 @@ package personal.vanmuur.glyphmod.item;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
+import personal.vanmuur.glyphmod.registry.ModBlocks;
 
 import java.util.List;
 
@@ -20,17 +26,32 @@ public class BlankRuneItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
-            player.sendSystemMessage(Component.literal("Nothing to say here."));
+    public InteractionResult useOn(UseOnContext context) {
+        Level level = context.getLevel();
+        BlockPos clickedPos = context.getClickedPos();
+        InteractionHand hand = context.getHand();
+        Player player = context.getPlayer();
 
-//            outputRandomNumber(player);
-//            player.getCooldowns().addCooldown(this, 20);
-
-//            return InteractionResult.sidedSuccess(level.isClientSide());
+        if (player == null || level.isClientSide() || hand != InteractionHand.MAIN_HAND) {
+            return InteractionResult.PASS;
         }
 
-        return super.use(level, player, hand);
+        BlockState state = level.getBlockState(clickedPos);
+        Block block = state.getBlock();
+
+        if (block == Blocks.SANDSTONE) {
+            // We want to replace the block at the pos with a WrittenSandstoneBlock.
+
+            level.removeBlock(clickedPos, false);
+
+            level.setBlock(clickedPos, ModBlocks.WRITTEN_SANDSTONE.get().defaultBlockState(), 1);
+
+            player.sendSystemMessage(Component.literal("You just clicked: Standstone."));
+
+            return InteractionResult.CONSUME;
+        }
+
+        return InteractionResult.PASS;
     }
 
     @Override
@@ -44,7 +65,7 @@ public class BlankRuneItem extends Item {
         super.appendHoverText(stack, level, components, flag);
     }
 
-//    private int getRandomNumber() {
+    //    private int getRandomNumber() {
 //        return RandomSource.createNewThreadLocalInstance().nextInt(10);
 //    }
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "glyphmod:block/written_sandstone"
+    },
+    "facing=south": {
+      "model": "glyphmod:block/written_sandstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "glyphmod:block/written_sandstone",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "glyphmod:block/written_sandstone",
+      "y": 90
+    }
+  }
+}
